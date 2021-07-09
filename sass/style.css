@@ -612,6 +612,9 @@ template {
     flex-basis: auto;
   }
 
+  .hotel {
+    padding-top: 5px;
+  }
   .hotel-name {
     flex-basis: 100%;
   }
