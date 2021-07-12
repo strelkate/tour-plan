@@ -33,18 +33,22 @@
         font-size: 12px
         line-height: 15px
 
-@media (max-width: 768px)
+  .slider
+    width: 700px
+    &-button
+      width: 28px
+
+  .swiper-container
+    height: 450px
+
+@media (max-width: 767px)
   .container
-    width: 92%
+    width: 88%
 
   .navbar
     &-top
       padding-top: 28px
       padding-bottom: 28px
-
-@media (max-width: 576px)
-  .container
-    width: 88%
 
   .logo
     width: 99px
@@ -100,5 +104,17 @@
         margin-left: 0
         margin-top: 0
 
+  .slider
+    width: 280px
+    &-button
+      width: 12px
+      height: 12px
+      &--next
+        right: 7px
+      &--prev
+        left: 7px
+
+  .swiper-container
+    height: 179px
 
 
