@@ -13,6 +13,7 @@ const swiper = new Swiper('.swiper-container', {
 ymaps.ready(function(){
     const myMap = new ymaps.Map ("map", {
         center: [7.890759, 98.294690],
+        controls: ["zoomControl"],
         zoom: 15
     });
 
@@ -22,8 +23,4 @@ ymaps.ready(function(){
     });
 
     myMap.geoObjects.add(myPlacemark);
-
-    myMap.controls.add('zoomControl', {
-        size: "small"
-    });
 });
