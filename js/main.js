@@ -1,9 +1,9 @@
-const swiper = new Swiper('.swiper-container', {
+const hotelSwiper = new Swiper('.hotel-slider', {
     loop: true,
 
     navigation: {
-        nextEl: '.slider-button--next',
-        prevEl: '.slider-button--prev',
+        nextEl: '.hotel-slider__button--next',
+        prevEl: '.hotel-slider__button--prev',
     },
     keyboard: {
         enabled: true,
@@ -15,7 +15,7 @@ ymaps.ready(function(){
         center: [7.890759, 98.294690],
         controls: ["zoomControl"],
         zoom: 15
-    });
+    },);
 
     const myPlacemark = new ymaps.Placemark([7.890759, 98.294690], {
         hintContent: 'DoubleTree by Hilton',
@@ -24,3 +24,5 @@ ymaps.ready(function(){
 
     myMap.geoObjects.add(myPlacemark);
 });
+
+
