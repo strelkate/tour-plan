@@ -25,4 +25,14 @@ ymaps.ready(function(){
     myMap.geoObjects.add(myPlacemark);
 });
 
+const reviewsSwiper = new Swiper('.reviews-slider', {
+    loop: true,
 
+    navigation: {
+        nextEl: '.reviews-slider__button--next',
+        prevEl: '.reviews-slider__button--prev',
+    },
+    keyboard: {
+        enabled: true,
+    },
+});
