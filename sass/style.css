@@ -637,7 +637,7 @@ template {
 .booking__pre-room {
   font-weight: normal;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 12px;
 }
 .booking__room {
   margin-top: 4px;
@@ -778,21 +778,21 @@ template {
 .reviews {
   padding: 40px 0 70px 0;
 }
-.reviews-title {
+.reviews__title {
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 45px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 70px;
+  margin: 0 0 70px 0;
 }
 .reviews-slider__item {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 730px;
+  max-width: 730px;
   margin: 45px auto 0;
   background-color: #ffffff;
   border-radius: 8px;
@@ -860,7 +860,7 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #EC1F46;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
 }
 .reviews-slider__date {
   font-style: normal;
@@ -926,6 +926,9 @@ template {
     line-height: 15px;
   }
 
+  .hotel {
+    padding-bottom: 60px;
+  }
   .hotel-grid {
     flex-direction: column;
   }
@@ -949,6 +952,15 @@ template {
 
   .map {
     width: 340px;
+  }
+
+  .reviews__title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 50px;
+  }
+  .reviews-slider__item {
+    max-width: 580px;
   }
 }
 @media (max-width: 767px) {
@@ -994,6 +1006,7 @@ template {
 
   .hotel {
     padding-top: 5px;
+    padding-bottom: 40px;
   }
   .hotel-name {
     flex-basis: 100%;
@@ -1045,6 +1058,26 @@ template {
   .newsletter-title__strong {
     margin-bottom: 37px;
   }
+
+  .reviews-slider__item {
+    padding: 0 30px 30px;
+  }
+  .reviews-slider__item:after, .reviews-slider__item:before {
+    display: none;
+  }
+  .reviews-slider__button {
+    top: 32px;
+  }
+  .reviews-slider__button--prev {
+    left: 50%;
+    margin-left: -70px;
+    transform: translate(-50%, 0);
+  }
+  .reviews-slider__button--next {
+    right: 50%;
+    margin-right: -70px;
+    transform: translate(50%, 0);
+  }
 }
 @media (max-width: 576px) {
   .hotel-info {
@@ -1084,6 +1117,14 @@ template {
   }
   .newsletter .subscribe__input {
     padding-left: 20px;
+  }
+
+  .reviews__title {
+    padding-left: 38px;
+    padding-right: 38px;
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 42px;
   }
 }
 

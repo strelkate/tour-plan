@@ -1,14 +1,14 @@
 .reviews
   padding: 40px 0 70px 0
 
-  &-title
+  &__title
     font-style: normal
     font-weight: bold
     font-size: 36px
     line-height: 45px
     text-align: center
     text-transform: uppercase
-    margin-bottom: 70px
+    margin: 0 0 70px 0
 
   &-slider
     &__item
@@ -16,7 +16,7 @@
       display: flex
       flex-direction: column
       align-items: center
-      width: 730px
+      max-width: 730px
       margin: 45px auto 0
       background-color: #ffffff
       border-radius: 8px
@@ -41,6 +41,7 @@
         top: 118px
         background-image: url("../img/quote-right.svg")
         background-repeat: no-repeat
+
     &__button
       position: absolute
       top: 50%
@@ -54,9 +55,11 @@
       background-color: transparent
       cursor: pointer
       z-index: 99
+
       &--prev
         background-image: url("../img/arrow-prev-secondary.svg")
         left: 0
+
       &--next
         background-image: url("../img/arrow-naxt-secondary.svg")
         right: 0
@@ -81,7 +84,7 @@
       font-size: 12px
       line-height: 15px
       color: $primary
-      margin-bottom: 10px
+      margin: 0 0 10px 0
 
     &__date
       font-style: normal
