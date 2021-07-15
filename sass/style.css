@@ -777,7 +777,7 @@ template {
 }
 
 .reviews {
-  padding: 40px 0 70px 0;
+  padding: 40px 0 0 0;
 }
 .reviews__title {
   font-style: normal;
@@ -787,6 +787,9 @@ template {
   text-align: center;
   text-transform: uppercase;
   margin: 0 0 70px 0;
+}
+.reviews__wrapper {
+  margin-bottom: 70px;
 }
 .reviews-slider__item {
   position: relative;
@@ -884,6 +887,77 @@ template {
   margin: auto;
 }
 
+.activities {
+  padding: 60px 0 98px 0;
+}
+.activities__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 0 0 57px 0;
+}
+.activities-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 26px;
+  width: 255px;
+  height: 255px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.card:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
+  z-index: -1;
+}
+.card__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.card__title {
+  margin-top: auto;
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+.card__button {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  padding: 7px 22px;
+  border: none;
+  background-color: #EC1F46;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -891,6 +965,11 @@ template {
 
   .hotel-slider {
     width: 580px;
+  }
+
+  .card {
+    width: 230px;
+    height: 230px;
   }
 }
 @media (max-width: 992px) {
@@ -960,8 +1039,26 @@ template {
     line-height: 38px;
     margin-bottom: 50px;
   }
+  .reviews__wrapper {
+    margin-bottom: 60px;
+  }
   .reviews-slider__item {
     max-width: 580px;
+  }
+
+  .activities {
+    padding: 60px 0 50px 0;
+  }
+  .activities-wrapper {
+    flex-wrap: wrap;
+  }
+  .activities__card {
+    margin-bottom: 20px;
+  }
+
+  .card {
+    width: 339px;
+    height: 255px;
   }
 }
 @media (max-width: 767px) {
@@ -1060,6 +1157,9 @@ template {
     margin-bottom: 37px;
   }
 
+  .reviews__wrapper {
+    margin-bottom: 50px;
+  }
   .reviews-slider__item {
     padding: 0 30px 30px;
   }
@@ -1078,6 +1178,20 @@ template {
     right: 50%;
     margin-right: -70px;
     transform: translate(50%, 0);
+  }
+
+  .activities {
+    padding: 40px 0 40px 0;
+  }
+  .activities__title {
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 36px;
+  }
+
+  .card {
+    width: 48%;
+    height: 255px;
   }
 }
 @media (max-width: 576px) {
@@ -1126,6 +1240,10 @@ template {
     font-size: 18px;
     line-height: 23px;
     margin-bottom: 42px;
+  }
+
+  .card {
+    width: 100%;
   }
 }
 

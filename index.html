@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,8 +10,8 @@
           rel="stylesheet">
     <link rel="stylesheet" href="sass/swiper-bundle.min.css">
     <link rel="stylesheet" href="sass/style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=5abdd719-a013-41ff-9a12-30709fbf27f4&lang=ru_RU&load=package.full"
-            type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5abdd719-a013-41ff-9a12-30709fbf27f4&lang=ru_RU&load=package.full"></script>
+    <!--type="text/javascript"-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
@@ -194,7 +194,7 @@
     <div class="container">
         <h2 class="reviews__title">What people think about us</h2>
         <div class="swiper-container reviews-slider">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper reviews__wrapper">
                 <div class="swiper-slide">
                     <div class="reviews-slider__item">
                         <div class="reviews-slider__profile">
@@ -202,13 +202,13 @@
                             <h3 class="reviews-slider__username">Megan Fox</h3>
                             <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
                             <div class="reviews-slider__rating">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
                             </div>
-                            <!-- /.stars -->
+                            <!-- /.reviews-slider__rating -->
                         </div>
                         <!-- /.reviews-slider__profile -->
                         <p class="reviews-slider__text">
@@ -233,13 +233,13 @@
                             <h3 class="reviews-slider__username">Angel Brown</h3>
                             <span class="reviews-slider__date">Stayed 7 Nov, 2017</span>
                             <div class="reviews-slider__rating">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
                             </div>
-                            <!-- /.stars -->
+                            <!-- /.reviews-slider__rating -->
                         </div>
                         <!-- /.reviews-slider__profile -->
                         <p class="reviews-slider__text">
@@ -261,13 +261,13 @@
                             <h3 class="reviews-slider__username">Jacob Miller</h3>
                             <span class="reviews-slider__date">Stayed 25 Dec, 2020</span>
                             <div class="reviews-slider__rating">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
-                                <img class="hotel-info__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                                <img class="reviews-slider__star" src="img/star.svg" alt="star">
                             </div>
-                            <!-- /.stars -->
+                            <!-- /.reviews-slider__rating -->
                         </div>
                         <!-- /.reviews-slider__profile -->
                         <p class="reviews-slider__text">
@@ -290,6 +290,39 @@
         <!-- /.reviews-slider -->
     </div>
     <!-- /.container -->
+    <section class="activities">
+        <div class="container">
+            <h2 class="activities__title">Other Activities</h2>
+            <div class="activities-wrapper">
+                <div class="card activities__card">
+                    <img src="img/activities-1.jpg" alt="The curious corner of chamarel" class="card__image">
+                    <h3 class="card__title">The curious corner <br>of chamarel</h3>
+                    <button class="card__button">Book Now</button>
+                </div>
+                <!-- /.card -->
+                <div class="card activities__card">
+                    <img src="img/activities-2.jpg" alt="Gymkhana club golf course" class="card__image">
+                    <h3 class="card__title">Gymkhana club golf <br>course</h3>
+                    <button class="card__button">Book Now</button>
+                </div>
+                <!-- /.card -->
+                <div class="card activities__card">
+                    <img src="img/activities-3.jpg" alt="Tamarind falls hiking trip - full day" class="card__image">
+                    <h3 class="card__title">Tamarind falls hiking <br>trip - full day</h3>
+                    <button class="card__button">Book Now</button>
+                </div>
+                <!-- /.card -->
+                <div class="card activities__card">
+                    <img src="img/activities-4.jpg" alt="The blue marine discovery quest" class="card__image">
+                    <h3 class="card__title">The blue marine discovery <br>quest</h3>
+                    <button class="card__button">Book Now</button>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.activities-wrapper -->
+        </div>
+        <!-- /.container -->
+    </section>
 </section>
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
