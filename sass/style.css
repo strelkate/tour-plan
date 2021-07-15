@@ -823,8 +823,8 @@ template {
 }
 .reviews-slider__button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 37%;
+  transform: translateY(-37%);
   width: 30px;
   height: 30px;
   background-repeat: no-repeat;
@@ -837,11 +837,11 @@ template {
 }
 .reviews-slider__button--prev {
   background-image: url("../img/arrow-prev-secondary.svg");
-  left: 0;
+  left: 17px;
 }
 .reviews-slider__button--next {
   background-image: url("../img/arrow-naxt-secondary.svg");
-  right: 0;
+  right: 17px;
 }
 .reviews-slider__profile {
   display: flex;
@@ -1014,9 +1014,6 @@ template {
   .hotel-slider {
     width: 100%;
   }
-  .hotel-slider__button {
-    width: 28px;
-  }
   .hotel__slider {
     margin-bottom: 30px;
   }
@@ -1033,6 +1030,10 @@ template {
     width: 340px;
   }
 
+  .newsletter {
+    padding: 92px 0 93px 0;
+  }
+
   .reviews__title {
     font-size: 30px;
     line-height: 38px;
@@ -1043,6 +1044,17 @@ template {
   }
   .reviews-slider__item {
     max-width: 580px;
+  }
+  .reviews-slider__button {
+    width: 28px;
+    top: 42%;
+    transform: translateY(-42%);
+  }
+  .reviews-slider__button--prev {
+    left: 2px;
+  }
+  .reviews-slider__button--next {
+    right: 2px;
   }
 
   .activities {
@@ -1157,7 +1169,7 @@ template {
   }
 
   .reviews__wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 56px;
   }
   .reviews-slider__item {
     padding: 0 30px 30px;
@@ -1166,17 +1178,17 @@ template {
     display: none;
   }
   .reviews-slider__button {
-    top: 32px;
+    top: 28px;
   }
   .reviews-slider__button--prev {
-    left: 50%;
-    margin-left: -70px;
-    transform: translate(-50%, 0);
+    left: 36%;
+    margin-left: -54px;
+    transform: translate(-36%, 0);
   }
   .reviews-slider__button--next {
-    right: 50%;
-    margin-right: -70px;
-    transform: translate(50%, 0);
+    right: 36%;
+    margin-right: -54px;
+    transform: translate(36%, 0);
   }
 
   .activities {
@@ -1239,6 +1251,19 @@ template {
     font-size: 18px;
     line-height: 23px;
     margin-bottom: 42px;
+  }
+
+  .activities__card-1 {
+    order: -1;
+  }
+  .activities__card-2 {
+    order: 2;
+  }
+  .activities__card-3 {
+    order: 1;
+  }
+  .activities__card-4 {
+    order: 3;
   }
 
   .card {
