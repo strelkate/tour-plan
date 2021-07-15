@@ -36,3 +36,4 @@ const reviewsSwiper = new Swiper('.reviews-slider', {
         enabled: true,
     },
 });
+
