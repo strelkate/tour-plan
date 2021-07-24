@@ -196,7 +196,7 @@
       padding-top: 28px
       padding-bottom: 28px
 
-    &__mobile
+    &--mobile
       &--fixed
         position: fixed
         left: 0
@@ -383,6 +383,7 @@
   .footer
     &-wrapper
       grid-row-gap: 31px
+      margin-bottom: 30px
 
     &__logo
       width: 94px
@@ -397,18 +398,34 @@
     &__title
       &--inline
         margin: 0 0 20px 0
+      &--mb-3
+        margin-top: 29px
+        margin-bottom: 15px
 
     &__form
       width: 281px
+      &--bottom
+        flex-direction: column-reverse
+        align-items: flex-start
 
     &__input
       flex-basis: 100%
 
     &__icon
       &-wrapper
-        min-width: 45px
+        min-width: 30px
         padding-left: 4px
         padding-top: 3px
+    &__bottom
+      flex-direction: column
+      &-links
+        margin-bottom: 10px
+      &-link
+        margin-right: 6px
+    &__message
+      margin-bottom: 15px
+    &__info
+      margin-bottom: 15px
 
 
 @media (max-width: 576px)

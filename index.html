@@ -15,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
-<header class="navbar navbar__mobile--fixed">
+<header class="navbar navbar--mobile--fixed">
     <div class="container">
         <div class="navbar-top">
             <a href="#" class="logo">
@@ -29,7 +29,7 @@
                 </button>
             </form>
 
-            <a href="#" class="user navbar-user navbar__user--mobile--hidden">
+            <a href="#" class="user navbar__user navbar__user--mobile--hidden">
                 <img src="img/user-avatar.jpeg" alt="Avatar: Nathan" class="user__avatar">
                 <span class="user__name">Nathan</span>
             </a>
@@ -48,7 +48,7 @@
         <div class="container">
             <ul class="navbar-menu">
                 <li class="navbar-menu__item navbar-menu__item--user navbar-menu__item--mobile--visible">
-                    <a href="#" class="user navbar-user navbar__user--mobile--visible">
+                    <a href="#" class="user navbar__user navbar__user--mobile--visible">
                         <img src="img/user-avatar.jpeg" alt="Avatar: Nathan" class="user__avatar">
                         <span class="user__name user__name--light">Nathan</span>
                     </a>
@@ -631,8 +631,11 @@
                     <input type="text" class="input footer__input" placeholder="Your Full Name*">
                     <input type="text" class="input footer__input" placeholder="Phone Number*">
                     <textarea cols="30" rows="10" class="footer__message" placeholder="Message"></textarea>
-                    <button class="button footer__button">Send</button>
-                    <span class="footer__info">* Required Fields</span>
+                    <div class="footer__form--bottom">
+                        <button class="button footer__button">Send</button>
+                        <span class="footer__info">* Required Fields</span>
+                    </div>
+
                 </form>
 
             </div>
