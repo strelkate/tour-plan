@@ -1,46 +1,68 @@
-const hotelSwiper = new Swiper('.hotel-slider', {
-    loop: true,
+$(document).ready(function () {
+    const hotelSwiper = new Swiper('.hotel-slider', {
+        loop: true,
 
-    navigation: {
-        nextEl: '.hotel-slider__button--next',
-        prevEl: '.hotel-slider__button--prev',
-    },
-    keyboard: {
-        enabled: true,
-    },
-});
-
-ymaps.ready(function(){
-    const myMap = new ymaps.Map ("map", {
-        center: [7.890759, 98.294690],
-        controls: ["zoomControl"],
-        zoom: 15
-    },);
-
-    const myPlacemark = new ymaps.Placemark([7.890759, 98.294690], {
-        hintContent: 'DoubleTree by Hilton',
-        balloonContent: 'DoubleTree by Hilton Phuket Banthai Resort '
+        navigation: {
+            nextEl: '.hotel-slider__button--next',
+            prevEl: '.hotel-slider__button--prev',
+        },
+        keyboard: {
+            enabled: true,
+        },
     });
 
-    myMap.geoObjects.add(myPlacemark);
+    ymaps.ready(function () {
+        const myMap = new ymaps.Map("map", {
+            center: [7.890759, 98.294690],
+            controls: ["zoomControl"],
+            zoom: 15
+        },);
+
+        const myPlacemark = new ymaps.Placemark([7.890759, 98.294690], {
+            hintContent: 'DoubleTree by Hilton',
+            balloonContent: 'DoubleTree by Hilton Phuket Banthai Resort '
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    });
+
+    const reviewsSwiper = new Swiper('.reviews-slider', {
+        loop: true,
+
+        navigation: {
+            nextEl: '.reviews-slider__button--next',
+            prevEl: '.reviews-slider__button--prev',
+        },
+        keyboard: {
+            enabled: true,
+        },
+    });
+
+    var menuButton = $(".menu-button");
+    menuButton.on('click', function () {
+        $('.navbar-bottom').toggleClass('navbar-bottom--visible')
+    })
+
+    var modalButton = $("[data-toggle=modal]");
+    var closeModalButton = $(".modal__close");
+    modalButton.on("click", openModal);
+    closeModalButton.on("click", closeModal);
+
+    function openModal() {
+        var modalOverlay = $(".modal__overlay");
+        var modalDialog = $(".modal__dialog");
+        modalOverlay.addClass("modal__overlay--visible");
+        modalDialog.addClass("modal__dialog--visible");
+    }
+
+    function closeModal(event) {
+        event.preventDefault();
+        var modalOverlay = $(".modal__overlay");
+        var modalDialog = $(".modal__dialog");
+        modalOverlay.removeClass("modal__overlay--visible");
+        modalDialog.removeClass("modal__dialog--visible");
+
+    }
+
+
 });
-
-const reviewsSwiper = new Swiper('.reviews-slider', {
-    loop: true,
-
-    navigation: {
-        nextEl: '.reviews-slider__button--next',
-        prevEl: '.reviews-slider__button--prev',
-    },
-    keyboard: {
-        enabled: true,
-    },
-});
-
-var menuButton = document.querySelector(".menu-button");
-
-menuButton.addEventListener('click', function (){
-    console.log("клик по кнопке")
-    document.querySelector('.navbar-bottom').classList.toggle('navbar-bottom--visible')
-})
-
