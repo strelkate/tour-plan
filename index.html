@@ -401,7 +401,7 @@
             <span class="newsletter-title__weak">subscribe to our</span>
             <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="send.php" method="POST" class="subscribe newsletter__subscribe subscribe__form">
+        <form action="send.php" method="POST" class="subscribe newsletter__subscribe newsletter__subscribe--form">
             <input type="email" class="subscribe__input" placeholder="Your email address" name="email" required>
             <button class="subscribe__button">Send</button>
         </form>
@@ -637,11 +637,11 @@
                                required minlength="2">
                     </div>
                     <div class="footer__input-group">
-                        <input type="tel" class="input footer__input input__phone" placeholder="Phone Number*" name="phone" required>
+                        <input type="tel" class="input footer__input footer__input--phone" placeholder="Phone Number*" name="phone" required>
                     </div>
 
                     <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
-                    <div class="footer__form--bottom">
+                    <div class="footer__buttons">
                         <button class="button footer__button">Send</button>
                         <span class="footer__info">* Required Fields</span>
                     </div>
@@ -673,10 +673,10 @@
         <form action="send.php" method="POST" class="modal__form">
             <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required
                    minlength="2">
-            <input type="tel" class="input modal__input input__phone" placeholder="Phone Number*" name="phone" required>
+            <input type="tel" class="input modal__input modal__input--phone" placeholder="Phone Number*" name="phone" required>
             <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
             <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
-            <div class="modal__form--bottom">
+            <div class="modal__bottom">
                 <button class="button modal__button">Send</button>
                 <span class="modal__info">* Required Fields</span>
             </div>

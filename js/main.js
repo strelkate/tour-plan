@@ -110,7 +110,7 @@ $(document).ready(function () {
             }
         }
     });
-    $('.subscribe__form').validate({
+    $('.newsletter__subscribe--form').validate({
         errorClass: "invalid",
         messages: {
             name: {
@@ -127,8 +127,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.input__phone').each(function () {
-        $(this).mask('+7 (999) 999-99-99', {placeholder: "+7 (___) ___-__-__"})
-    })
+    $('.footer__input--phone').mask('+7 (999) 999-99-99', {placeholder: "+7 (___) ___-__-__"});
+    $('.modal__input--phone').mask('+7 (999) 999-99-99', {placeholder: "+7 (___) ___-__-__"});
 
 });

@@ -56,6 +56,7 @@ img {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .button:hover {
@@ -953,6 +954,7 @@ template {
   border: none;
   color: #ffffff;
   cursor: pointer;
+  outline: none;
 }
 .packages__button:hover {
   background-color: #ff0031;
@@ -970,6 +972,7 @@ template {
   color: #ffffff;
   cursor: pointer;
   margin-top: 18px;
+  outline: none;
 }
 .packages__button-1:hover {
   background-color: #ff0031;
@@ -1235,6 +1238,7 @@ template {
   background-color: #EC1F46;
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
 }
 .card__button:hover {
   background-color: #ff0031;
@@ -1364,7 +1368,7 @@ template {
 .footer__form {
   align-items: flex-start;
 }
-.footer__form--bottom {
+.footer__buttons {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1463,7 +1467,7 @@ template {
   min-height: 123px;
   margin-top: 15px;
 }
-.modal__form--bottom {
+.modal__bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1670,7 +1674,7 @@ template {
   .modal__dialog {
     padding: 25px 40px;
   }
-  .modal__form--bottom {
+  .modal__bottom {
     flex-direction: column-reverse;
     align-items: flex-start;
   }
@@ -1904,7 +1908,7 @@ template {
   .footer__form {
     width: 281px;
   }
-  .footer__form--bottom {
+  .footer__buttons {
     flex-direction: column-reverse;
     align-items: flex-start;
   }

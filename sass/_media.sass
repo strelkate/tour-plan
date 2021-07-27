@@ -181,10 +181,11 @@
   .modal
     &__dialog
       padding: 25px 40px
-    &__form
-      &--bottom
-        flex-direction: column-reverse
-        align-items: flex-start
+
+    &__bottom
+      flex-direction: column-reverse
+      align-items: flex-start
+
     &__info
       margin-bottom: 15px
 
@@ -408,15 +409,17 @@
     &__title
       &--inline
         margin: 0 0 20px 0
+
       &--mb-3
         margin-top: 29px
         margin-bottom: 15px
 
     &__form
       width: 281px
-      &--bottom
-        flex-direction: column-reverse
-        align-items: flex-start
+
+    &__buttons
+      flex-direction: column-reverse
+      align-items: flex-start
 
     &__input
       &-group
@@ -427,14 +430,19 @@
         min-width: 30px
         padding-left: 4px
         padding-top: 3px
+
     &__bottom
       flex-direction: column
+
       &-links
         margin-bottom: 10px
+
       &-link
         margin-right: 6px
+
     &__message
       margin-bottom: 15px
+
     &__info
       margin-bottom: 15px
 
