@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const hotelSwiper = new Swiper('.hotel-slider', {
+    new Swiper('.hotel-slider', {
         loop: true,
 
         navigation: {
@@ -11,22 +11,24 @@ $(document).ready(function () {
         },
     });
 
-    ymaps.ready(function () {
-        const myMap = new ymaps.Map("map", {
-            center: [7.890759, 98.294690],
-            controls: ["zoomControl"],
-            zoom: 15
-        },);
+    if (typeof ymaps !== 'undefined') {
+        ymaps.ready(function () {
+            const myMap = new ymaps.Map("map", {
+                center: [7.890759, 98.294690],
+                controls: ["zoomControl"],
+                zoom: 15
+            },);
 
-        const myPlacemark = new ymaps.Placemark([7.890759, 98.294690], {
-            hintContent: 'DoubleTree by Hilton',
-            balloonContent: 'DoubleTree by Hilton Phuket Banthai Resort '
+            const myPlacemark = new ymaps.Placemark([7.890759, 98.294690], {
+                hintContent: 'DoubleTree by Hilton',
+                balloonContent: 'DoubleTree by Hilton Phuket Banthai Resort '
+            });
+
+            myMap.geoObjects.add(myPlacemark);
         });
+    }
 
-        myMap.geoObjects.add(myPlacemark);
-    });
-
-    const reviewsSwiper = new Swiper('.reviews-slider', {
+    new Swiper('.reviews-slider', {
         loop: true,
 
         navigation: {
@@ -69,30 +71,13 @@ $(document).ready(function () {
         modalDialog.removeClass("modal__dialog--visible");
     }
 
-    $(document).keyup(function(e) {
+    $(document).keyup(function (e) {
         if (e.key === "Escape" || e.keyCode === 27) {
             closeModal();
         }
     });
 
     // Обработка форм
-    const validateForm = {
-        errorClass: "invalid",
-        messages: {
-            name: {
-                required: "Please specify your name",
-                minlength: "Name should be at least 2 characters"
-            },
-            email: {
-                required: "We need your email address to contact you",
-                email: "Your email address must be in the format of name@domain.com"
-            },
-            phone: {
-                required: "Please enter your phone number"
-            }
-        }
-    };
-
     $('.form').validate({
         errorClass: "invalid",
         messages: {
@@ -141,5 +126,9 @@ $(document).ready(function () {
             }
         }
     });
+
+    $('.input__phone').each(function () {
+        $(this).mask('+7 (999) 999-99-99', {placeholder: "+7 (___) ___-__-__"})
+    })
 
 });
