@@ -44,22 +44,24 @@
   .subscribe
     position: relative
     width: 350px
-    height: 55px
-    border-radius: 4px
-    overflow: hidden
+    height: 100px
+    margin-top: 45px
+
     &__input
-      position: absolute
+      //position: absolute
       width: 100%
-      height: 100%
+      height: 55px
       border: none
       padding-left: 33px
       padding-right: 75px
       font-weight: 300
       font-size: 14px
       line-height: 18px
+      border-radius: 4px
+      outline: none
+
     &__button
       position: absolute
-
       right: 0
       top: 0
       padding: 20px 18px
@@ -70,4 +72,9 @@
       font-weight: bold
       font-size: 12px
       line-height: 15px
+      cursor: pointer
+      border-radius: 0 4px 4px 0
+
+    &__button:hover
+      background-color: #ff0031
 

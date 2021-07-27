@@ -44,9 +44,11 @@ $(document).ready(function () {
     })
 
     var modalButton = $("[data-toggle=modal]");
-    var closeModalButton = $(".modal__close");
     modalButton.on("click", openModal);
-    closeModalButton.on("click", closeModal);
+    var closeModalButton = $(".modal__close");
+    closeModalButton.on("click", closeModalClick);
+    var modalOverlay = $(".modal__overlay");
+    modalOverlay.on("click", closeModalClick);
 
     function openModal() {
         var modalOverlay = $(".modal__overlay");
@@ -55,14 +57,89 @@ $(document).ready(function () {
         modalDialog.addClass("modal__dialog--visible");
     }
 
-    function closeModal(event) {
+    function closeModalClick(event) {
         event.preventDefault();
+        closeModal();
+    }
+
+    function closeModal() {
         var modalOverlay = $(".modal__overlay");
         var modalDialog = $(".modal__dialog");
         modalOverlay.removeClass("modal__overlay--visible");
         modalDialog.removeClass("modal__dialog--visible");
-
     }
 
+    $(document).keyup(function(e) {
+        if (e.key === "Escape" || e.keyCode === 27) {
+            closeModal();
+        }
+    });
+
+    // Обработка форм
+    const validateForm = {
+        errorClass: "invalid",
+        messages: {
+            name: {
+                required: "Please specify your name",
+                minlength: "Name should be at least 2 characters"
+            },
+            email: {
+                required: "We need your email address to contact you",
+                email: "Your email address must be in the format of name@domain.com"
+            },
+            phone: {
+                required: "Please enter your phone number"
+            }
+        }
+    };
+
+    $('.form').validate({
+        errorClass: "invalid",
+        messages: {
+            name: {
+                required: "Please specify your name",
+                minlength: "Name should be at least 2 characters"
+            },
+            email: {
+                required: "We need your email address to contact you",
+                email: "Your email address must be in the format of name@domain.com"
+            },
+            phone: {
+                required: "Please enter your phone number"
+            }
+        }
+    });
+    $('.modal__form').validate({
+        errorClass: "invalid",
+        messages: {
+            name: {
+                required: "Please specify your name",
+                minlength: "Name should be at least 2 characters"
+            },
+            email: {
+                required: "We need your email address to contact you",
+                email: "Your email address must be in the format of name@domain.com"
+            },
+            phone: {
+                required: "Please enter your phone number"
+            }
+        }
+    });
+    $('.subscribe__form').validate({
+        errorClass: "invalid",
+        messages: {
+            name: {
+                required: "Please specify your name",
+                minlength: "Name should be at least 2 characters"
+            },
+            email: {
+                required: "We need your email address to contact you",
+                email: "Your email address must be in the format of name@domain.com"
+            },
+            phone: {
+                required: "Please enter your phone number"
+            }
+        }
+    });
 
 });

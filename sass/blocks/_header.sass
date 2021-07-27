@@ -35,6 +35,8 @@
       font-weight: bold
       line-height: 18px
 
+    &__link:hover
+      text-decoration: underline
     &__item
       &--mobile
         &--visible
@@ -60,6 +62,7 @@
     font-size: 12px
     line-height: 15px
     color: $text-color
+    outline: none
 
   &__button
     position: absolute
@@ -69,6 +72,10 @@
     height: 100%
     border: none
     background-color: $primary
+    cursor: pointer
+
+  &__button:hover
+    background-color: #ff0031
 
 .user
   display: flex

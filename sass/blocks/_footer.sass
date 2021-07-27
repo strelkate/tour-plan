@@ -88,6 +88,7 @@
     line-height: 160%
     color: $footer-text-color
 
+
     &--mb-2
       margin-bottom: 20px
 
@@ -105,18 +106,24 @@
   &__link
     text-decoration: none
     color: inherit
+  &__link:hover
+    color: $light
 
   &__input
-    margin-bottom: 15px
-    flex-basis: 48%
+    width: 100%
+    &-group
+      margin-bottom: 15px
+      flex-basis: 48%
 
   &__message
-    width: 539px
+    //width: 539px
     min-height: 123px
     flex-basis: 100%
     margin-bottom: 23px
+    outline: none
 
   &__form
+    align-items: flex-start
     &--bottom
       width: 100%
       display: flex
