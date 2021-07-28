@@ -115,8 +115,8 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-wrapper">
-            <a href="index.html">
-                <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan" class="logo footer__logo">
+            <a class="logo footer__logo" href="index.html">
+                <img src="img/vertical-logo.svg" alt="Logo: Best Tour Plan">
             </a>
             <div class="footer__list footer__categories">
                 <h3 class="footer__title">All&nbsp;categories</h3>
@@ -147,13 +147,13 @@
             <div class="footer__social-network">
                 <h3 class="footer__title footer__title--inline">Social&nbsp;Network</h3>
                 <div class="footer__social-links">
-                    <a href="#" class="footer__link">
+                    <a href="https://ru-ru.facebook.com/" target="_blank" class="footer__link">
                         <img src="img/facebook.svg" alt="icon: facebook">
                     </a>
-                    <a href="#" class="footer__link">
+                    <a href="https://www.youtube.com/" target="_blank" class="footer__link">
                         <img src="img/youtube.svg" alt="icon: youtube">
                     </a>
-                    <a href="#" class="footer__link">
+                    <a href="https://www.instagram.com/?hl=ru" target="_blank" class="footer__link">
                         <img src="img/instagram.svg" alt="icon: instagram">
                     </a>
                 </div>
@@ -186,15 +186,15 @@
                         <div class="footer__icon-wrapper">
                             <img class="footer__icon" src="img/contact-phone-call.svg" alt="icon: contact-phone-call">
                         </div>
-                        Tel (business hours) : 269 1500<br>
-                        Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)<br>
-                        Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)<br>
+                        <span>Tel (business hours) :<a class="footer__link" href="tel:2691500"> 269&nbsp;1500</a><br>
+                        Tel (hotline) Monday - Saturday:<a class="footer__link" href="tel:52-56-61-38"> 52&#8209;56&#8209;61&#8209;38</a> (08:00 am – 20:00 pm)<br>
+                        Tel (hotline) Sunday:<a class="footer__link" href="tel:52-56-61-38"> 52&#8209;56&#8209;61&#8209;38</a> (08:00 am – 14:00 pm)</span>
                     </li>
                     <li class="footer__item footer__item--mb-2">
                         <div class="footer__icon-wrapper">
                             <img class="footer__icon" src="img/email.svg" alt="icon: email">
                         </div>
-                        cherly.lawson@example.com
+                        <a class="footer__link" href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
                     </li>
                 </ul>
             </div>
@@ -202,10 +202,16 @@
             <div class="footer__contact-form">
                 <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
                 <form action="send.php" method="POST" class="footer__form">
-                    <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-                    <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
+                    <div class="footer__input-group">
+                        <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name"
+                               required minlength="2">
+                    </div>
+                    <div class="footer__input-group">
+                        <input type="tel" class="input footer__input footer__input--phone" placeholder="Phone Number*" name="phone" required minlength="18">
+                    </div>
+
                     <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
-                    <div class="footer__form--bottom">
+                    <div class="footer__buttons">
                         <button class="button footer__button">Send</button>
                         <span class="footer__info">* Required Fields</span>
                     </div>

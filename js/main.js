@@ -78,19 +78,16 @@ $(document).ready(function () {
     });
 
     // Обработка форм
-    $('.form').validate({
+    $('.footer__form').validate({
         errorClass: "invalid",
         messages: {
             name: {
                 required: "Please specify your name",
                 minlength: "Name should be at least 2 characters"
             },
-            email: {
-                required: "We need your email address to contact you",
-                email: "Your email address must be in the format of name@domain.com"
-            },
             phone: {
-                required: "Please enter your phone number"
+                required: "Please enter your phone number",
+                minlength: "Phone should be at least 10 characters"
             }
         }
     });
@@ -106,28 +103,24 @@ $(document).ready(function () {
                 email: "Your email address must be in the format of name@domain.com"
             },
             phone: {
-                required: "Please enter your phone number"
+                required: "Please enter your phone number",
+                minlength: "Phone should be at least 10 characters"
             }
         }
     });
     $('.newsletter__subscribe--form').validate({
         errorClass: "invalid",
         messages: {
-            name: {
-                required: "Please specify your name",
-                minlength: "Name should be at least 2 characters"
-            },
             email: {
                 required: "We need your email address to contact you",
                 email: "Your email address must be in the format of name@domain.com"
-            },
-            phone: {
-                required: "Please enter your phone number"
             }
         }
     });
 
     $('.footer__input--phone').mask('+7 (999) 999-99-99', {placeholder: "+7 (___) ___-__-__"});
     $('.modal__input--phone').mask('+7 (999) 999-99-99', {placeholder: "+7 (___) ___-__-__"});
+
+    AOS.init();
 
 });
