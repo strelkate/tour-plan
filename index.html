@@ -13,9 +13,6 @@
     <link rel="stylesheet" href="sass/swiper-bundle.min.css">
     <link rel="stylesheet" href="sass/aos.css">
     <link rel="stylesheet" href="sass/style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=5abdd719-a013-41ff-9a12-30709fbf27f4&lang=ru_RU&load=package.full"></script>
-    <!--type="text/javascript"-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
 <header class="navbar navbar--mobile--fixed">
@@ -134,16 +131,16 @@
                         <img class="hotel-slider__image" src="img/slide-1.jpg" alt="slide">
                     </div>
                     <div class="swiper-slide hotel-slider__slide">
-                        <img class="hotel-slider__image" src="img/slide-2.jpg" alt="slide">
+                        <img class="hotel-slider__image lazyload" data-src="img/slide-2.jpg" alt="slide">
                     </div>
                     <div class="swiper-slide hotel-slider__slide">
-                        <img class="hotel-slider__image" src="img/slide-3.jpg" alt="slide">
+                        <img class="hotel-slider__image lazyload" data-src="img/slide-3.jpg" alt="slide">
                     </div>
                     <div class="swiper-slide hotel-slider__slide">
-                        <img class="hotel-slider__image" src="img/slide-4.jpg" alt="slide">
+                        <img class="hotel-slider__image lazyload" data-src="img/slide-4.jpg" alt="slide">
                     </div>
                     <div class="swiper-slide hotel-slider__slide">
-                        <img class="hotel-slider__image" src="img/slide-5.jpg" alt="slide">
+                        <img class="hotel-slider__image lazyload" data-src="img/slide-5.jpg" alt="slide">
                     </div>
                 </div>
                 <!-- /.swiper-wrapper -->
@@ -447,8 +444,8 @@
                 <div class="swiper-slide">
                     <div class="reviews-slider__item">
                         <div class="reviews-slider__profile">
-                            <img src="img/reviews-avatar-2.jpg" alt="Photo: Angel Brown"
-                                 class="reviews-slider__avatar">
+                            <img data-src="img/reviews-avatar-2.jpg" alt="Photo: Angel Brown"
+                                 class="reviews-slider__avatar lazyload">
                             <h3 class="reviews-slider__username">Angel Brown</h3>
                             <span class="reviews-slider__date">Stayed 7 Nov, 2017</span>
                             <div class="reviews-slider__rating">
@@ -475,8 +472,8 @@
                 <div class="swiper-slide">
                     <div class="reviews-slider__item">
                         <div class="reviews-slider__profile">
-                            <img src="img/reviews-avatar-3.jpg" alt="Photo: Jacob Miller"
-                                 class="reviews-slider__avatar">
+                            <img data-src="img/reviews-avatar-3.jpg" alt="Photo: Jacob Miller"
+                                 class="reviews-slider__avatar lazyload">
                             <h3 class="reviews-slider__username">Jacob Miller</h3>
                             <span class="reviews-slider__date">Stayed 25 Dec, 2020</span>
                             <div class="reviews-slider__rating">
@@ -663,7 +660,7 @@
                 <a href="#" class="footer__bottom-link">Conditions of use</a>
                 <a href="#" class="footer__bottom-link">Cancellation policy</a>
             </div>
-            <img src="img/payment.jpg" alt="Icon: Cards for payment" class="footer__bottom-image">
+            <img data-src="img/payment.jpg" alt="Icon: Cards for payment" class="footer__bottom-image lazyload">
         </div>
     </div>
     <!-- /.container -->
@@ -692,13 +689,17 @@
     <!-- /.modal__dialog -->
 </div>
 <!-- /.modal -->
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/swiper-bundle.min.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/jquery.mask.min.js"></script>
-<script src="js/aos.js"></script>
-<script src="js/main.js"></script>
-<script src="js/parallax.min.js"></script>
-<script src="js/parallax.js"></script>
+<script defer src="js/jquery-3.6.0.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<script defer src="js/swiper-bundle.min.js"></script>
+<script defer src="https://api-maps.yandex.ru/2.1/?apikey=5abdd719-a013-41ff-9a12-30709fbf27f4&lang=ru_RU&load=package.full"></script>
+<script defer src="js/jquery.validate.min.js"></script>
+<script defer src="js/jquery.mask.min.js"></script>
+<script defer src="js/aos.js"></script>
+<script defer src="js/main.js"></script>
+<script async src="js/parallax.min.js"></script>
+<script async src="js/parallax.js"></script>
+<script async src="js/lazysizes.min.js"></script>
+
 </body>
 </html>
