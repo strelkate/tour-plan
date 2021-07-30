@@ -19,6 +19,34 @@
       flex-basis: 100%
 
 @media (max-width: 992px)
+  .button:hover
+    background-color: $primary
+
+  .navbar
+    &-menu
+      &__link:hover
+        text-decoration: none
+
+  .search
+    &__button:hover
+      background-color: $primary
+
+  .packages
+    &__button:hover
+      background-color: $primary
+
+    &__button-1:hover
+      background-color: $primary
+
+.newsletter
+  .subscribe
+    &__button:hover
+      background-color: $primary
+
+  .activities
+    &__button:hover
+      background-color: $primary
+
   .container,
   .newsletter-wrapper
     max-width: 700px
@@ -107,6 +135,7 @@
 
     &__card
       margin-bottom: 20px
+
   .card
     width: 339px
     height: 255px
@@ -118,14 +147,15 @@
       margin: 0 0 40px 0
 
     &-grid
-      grid-template-columns: 500px 500px 500px / 1fr 1fr
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(3, 500px)
       grid-template-areas: "element-1 element-1" "element-2 element-3" "element-4 element-5"
 
   .footer
     padding-top: 73px
 
     &-wrapper
-      grid-template-columns: min-content 1fr 1fr
+      grid-template-columns: repeat(3, min-content 1fr 1fr)
       grid-row-gap: 50px
       grid-column-gap: 50px
       margin-bottom: 60px
@@ -192,6 +222,7 @@
 @media (max-width: 767px)
   .container
     width: 88%
+
   body
     padding-top: 70px
 
@@ -202,6 +233,7 @@
   .search
     &__input
       width: 243px
+
   .navbar
     &-top
       padding-top: 28px
@@ -216,6 +248,8 @@
         z-index: 99
 
     &__search
+      margin-left: 0
+
       &--mobile
         &--hidden
           display: none
@@ -244,6 +278,7 @@
 
       &--visible
         display: block
+        overflow: auto
 
     &-menu
       padding: 0
@@ -294,6 +329,8 @@
     padding-top: 5px
     padding-bottom: 40px
 
+    &-grid
+      flex-direction: column
     &-name
       flex-basis: 100%
 
@@ -318,6 +355,7 @@
 
     &-slider
       height: 350px
+      width: 100%
       margin-bottom: 20px
 
     &-right
@@ -382,29 +420,67 @@
 
   .packages
     &-grid
-      grid-template-columns: 500px 500px 500px 500px 500px / 1fr
+      grid-template-columns: repeat(1, 1fr)
+      grid-template-rows: repeat(5, 675px 500px 500px 500px 500px)
       grid-template-areas: "element-1" "element-2" "element-3" "element-4" "element-5"
 
     &__description
       max-width: 100%
 
-    &__image-content-1
-      display: none
+    &__element
+      &-1
+        flex-direction: column
+
+    &__image
+      &-1
+        width: 100%
+        height: 250px
+        border-radius: 8px 8px 0 0
+
+    .packages
+      &__text-content-1
+        padding: 30px 21px 25px 32px
 
   .footer
     &-wrapper
       grid-row-gap: 31px
       margin-bottom: 30px
+      grid-template-columns: repeat(1, 1fr)
 
     &__logo
+      grid-row: 1
+      grid-column: 1
       width: 94px
       height: auto
 
     &__social
       &-network
+        grid-row: 2
+        grid-column: 1
         flex-direction: column
         margin-left: 0
         margin-top: 6px
+
+    &__legal
+      grid-row: 3
+      grid-column: 1
+
+    &__additional
+      grid-row: 4
+      grid-column: 1
+
+    &__categories
+      grid-row: 5
+      grid-column: 1
+
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+
+      &-form
+        grid-row: 7
+        grid-column: 1
 
     &__title
       &--inline
@@ -486,6 +562,10 @@
       &__input
         padding-left: 20px
 
+  .packages
+    &__description
+      margin: 0 0 30px 0
+
   .reviews
     &__title
       padding-left: 38px
@@ -508,38 +588,3 @@
       order: 3
   .card
     width: 100%
-
-  .footer
-    &-wrapper
-      grid-template-columns: 1fr
-
-    &__logo
-      grid-row: 1
-      grid-column: 1
-
-    &__social
-      &-network
-        grid-row: 2
-        grid-column: 1
-
-    &__legal
-      grid-row: 3
-      grid-column: 1
-
-    &__additional
-      grid-row: 4
-      grid-column: 1
-
-    &__categories
-      grid-row: 5
-      grid-column: 1
-
-    &__contact
-      &-details
-        grid-row: 6
-        grid-column: 1
-
-      &-form
-        grid-row: 7
-        grid-column: 1
-
