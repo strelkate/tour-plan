@@ -118,8 +118,8 @@ $(document).ready(function () {
         }
     });
 
-    $('.footer__input--phone').mask('+7 (999) 999-99-99', {placeholder: "+7 (___) ___-__-__"});
-    $('.modal__input--phone').mask('+7 (999) 999-99-99', {placeholder: "+7 (___) ___-__-__"});
+    $('.footer__input--phone').mask('+7 (999) 999-99-99');
+    $('.modal__input--phone').mask('+7 (999) 999-99-99');
 
     AOS.init();
 

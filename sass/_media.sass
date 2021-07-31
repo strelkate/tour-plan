@@ -48,8 +48,16 @@
       background-color: $primary
 
   .footer
+    &__link
+      &--icon:hover
+        background: none
+
     &__link:hover
       color: inherit
+
+    &__bottom
+      &-link:hover
+        text-decoration: none
 
   .container,
   .newsletter-wrapper
@@ -149,6 +157,8 @@
 
     &__title
       margin: 0 0 40px 0
+      font-size: 30px
+      line-height: 38px
 
     &-grid
       grid-template-columns: repeat(2, 1fr)
@@ -214,7 +224,7 @@
 
   .modal
     &__dialog
-      padding: 25px 40px
+      padding: 25px 60px
 
     &__bottom
       flex-direction: column-reverse
@@ -427,7 +437,7 @@
   .packages
     &-grid
       grid-template-columns: repeat(1, 1fr)
-      grid-template-rows: 675px 500px 500px 500px 500px
+      grid-template-rows: minmax(675px, max-content) 500px 500px 500px 500px
       grid-template-areas: "element-1" "element-2" "element-3" "element-4" "element-5"
 
     &__description
@@ -442,6 +452,7 @@
       border-radius: 8px 8px 0 0
 
     &__text-content-1
+      //min-height: 411px
       padding: 30px 21px 25px 32px
 
   .footer
@@ -486,7 +497,6 @@
       &-form
         grid-row: 7
         grid-column: 1
-
 
     &__form
       width: 281px
@@ -561,8 +571,15 @@
         padding-left: 20px
 
   .packages
+    //&__text
+    //  &-content-1
+    //    height: auto
+
     &__description
       margin: 0 0 30px 0
+    &__title
+      font-size: 18px
+      line-height: 23px
 
   .reviews
     &__title
@@ -587,6 +604,9 @@
   .card
     width: 100%
 
+  .modal
+    &__dialog
+      padding: 25px 30px
 
   .footer
     &__title

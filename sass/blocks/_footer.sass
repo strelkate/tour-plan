@@ -106,12 +106,17 @@
   &__link
     text-decoration: none
     color: inherit
+    &--icon:hover
+      background: rgba(255,255,255,1)
 
   &__link:hover
     color: $light
 
+
   &__input
     width: 100%
+    &--phone:focus
+
 
     &-group
       margin-bottom: 15px
@@ -159,6 +164,9 @@
 
     &-link:nth-child(3)
       margin-right: 0
+
+    &-link:hover
+      text-decoration: underline
 
     &-image
       justify-self: flex-end
