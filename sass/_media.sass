@@ -379,7 +379,13 @@
     width: 100%
     margin-bottom: 20px
 
-  .map
+  .ymap-container
+    background: url('../img/yandex-before-load-marker-767.png') #ffffff no-repeat
+    background-position: center center
+    background-size: cover
+    width: 100%
+
+  #map-yandex
     width: 100%
 
   .newsletter
@@ -530,6 +536,10 @@
     &__info
       margin-bottom: 15px
 
+    &__title
+      &--inline
+        margin: 0 0 20px 0
+
 
 @media (max-width: 576px)
 
@@ -550,7 +560,14 @@
         &--prev
           left: 7px
 
-  .map
+
+  .ymap-container
+    background: url('../img/yandex-before-load-marker-576.png') #ffffff no-repeat
+    background-position: center center
+    background-size: cover
+    max-height: 173px
+
+  #map-yandex
     max-height: 173px
 
   .newsletter

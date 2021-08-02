@@ -222,8 +222,64 @@
     color: $light
     cursor: pointer
 
-.map
-  width: 347px
-  height: 210px
-  border-radius: 10px
+//.map
+//  width: 347px
+//  height: 210px
+//  //border-radius: 10px
+//  overflow: hidden
+
+/* &#34;Блок-обертка&#34;, где мы задаем фоновое изображение скриншотом как на карте */
+.ymap-container
+  position: relative
   overflow: hidden
+  cursor: pointer
+  background: url('../img/yandex-before-load-marker.png') #ffffff no-repeat
+  background-position: center center
+  background-size: cover
+  border-radius: 10px
+
+
+/* Блок, в котором появится Яндекс.Карта */
+#map-yandex
+  position: relative
+  z-index: 7
+  width: 350px
+  height: 210px
+  cursor: pointer
+  background-color: transparent
+
+/* Индикатор загрузки, который показывается до загрузки карты */
+.loader
+  position: absolute
+  z-index: 15
+  top: -100%
+  left: 0
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  overflow: hidden
+  color: #000000
+  transition: opacity .7s ease
+  opacity: 0
+
+.loader:after,
+.loader:before
+  box-sizing: border-box
+
+
+.loader.is-active
+  top: 0
+  opacity: 1
+
+.loader-default:after
+  position: absolute
+  top: calc(50% - 24px)
+  left: calc(50% - 24px)
+  width: 48px
+  height: 48px
+  content: ''
+  animation: rotation 1s linear infinite
+  border: solid 8px #ffffff
+  border-left-color: transparent
+  border-radius: 50%
+

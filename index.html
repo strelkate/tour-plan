@@ -181,10 +181,21 @@
                     <button data-toggle=modal class="button booking__button">View Other Options</button>
                 </div>
                 <!-- /.booking -->
-                <div class="map">
-                    <div id="map" style="width: 100%; height: 100%"></div>
+
+
+                <div class="ymap-container">
+                    <div class="loader loader-default"></div>
+                    <div id="map-yandex"></div>
                 </div>
+                <!-- .ymap-container -->
+
+
+<!--                <div class="map">-->
+<!--                    <div id="map" style="width: 100%; height: 100%"></div>-->
+<!--                </div>-->
                 <!-- /.map -->
+
+
             </div>
             <!-- /.hotel-right -->
         </div>
@@ -666,7 +677,7 @@
     <!-- /.container -->
 </footer>
 <div class="modal">
-    <div class="modal__overlay"></div>
+    <div id="modal_overlay" class="modal__overlay"></div>
     <!-- /.modal__overlay -->
     <div class="modal__dialog">
         <a href="#" class="modal__close">
@@ -692,7 +703,6 @@
 <script defer src="js/jquery-3.6.0.min.js"></script>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
 <script defer src="js/swiper-bundle.min.js"></script>
-<script defer src="https://api-maps.yandex.ru/2.1/?apikey=5abdd719-a013-41ff-9a12-30709fbf27f4&lang=ru_RU&load=package.full"></script>
 <script defer src="js/jquery.validate.min.js"></script>
 <script defer src="js/jquery.mask.min.js"></script>
 <script defer src="js/aos.js"></script>
